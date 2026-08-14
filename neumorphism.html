@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Neumorphism — Freestyle</title>
+<style>
+*{box-sizing:border-box}html,body{margin:0;min-height:100%;font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:#e0e5ec;color:#313742}body{display:grid;place-items:center;padding:40px}.wrap{width:min(1100px,100%)}
+header{text-align:center;margin-bottom:42px}h1{margin:0 0 10px;font-size:clamp(42px,7vw,78px);letter-spacing:-.06em;font-weight:800}header p{margin:0;color:#737b87;font-size:15px;letter-spacing:.08em;text-transform:uppercase}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}.card,.panel,.pill,.button,.input{background:#e0e5ec;box-shadow:12px 12px 24px #bec3ca,-12px -12px 24px #fff;border-radius:28px}.card{padding:30px;min-height:250px}.card h2{font-size:20px;margin:0 0 12px}.card p{color:#727985;line-height:1.6;font-size:14px}
+.inset{box-shadow:inset 7px 7px 14px #bec3ca,inset -7px -7px 14px #fff}.circle{width:92px;height:92px;border-radius:50%;display:grid;place-items:center;margin-bottom:25px}.circle span{font-size:30px}.buttons{display:flex;gap:14px;flex-wrap:wrap}.button{border:0;padding:15px 22px;color:#59616d;font-weight:700;cursor:pointer;transition:.2s}.button:hover{transform:translateY(-2px)}.button:active{box-shadow:inset 5px 5px 10px #bec3ca,inset -5px -5px 10px #fff;transform:translateY(0)}
+.input{width:100%;border:0;outline:0;padding:17px 20px;color:#444b56;box-shadow:inset 6px 6px 12px #bec3ca,inset -6px -6px 12px #fff;margin-bottom:16px}.input::placeholder{color:#9aa0aa}.range{appearance:none;width:100%;height:14px;border-radius:20px;background:#e0e5ec;box-shadow:inset 4px 4px 8px #bec3ca,inset -4px -4px 8px #fff}.range::-webkit-slider-thumb{appearance:none;width:28px;height:28px;border-radius:50%;background:#e0e5ec;box-shadow:5px 5px 10px #bec3ca,-5px -5px 10px #fff;cursor:pointer}.toggle{width:64px;height:34px;border-radius:30px;padding:5px;cursor:pointer;box-shadow:inset 4px 4px 8px #bec3ca,inset -4px -4px 8px #fff}.toggle i{display:block;width:24px;height:24px;border-radius:50%;background:#e0e5ec;box-shadow:3px 3px 7px #bec3ca,-3px -3px 7px #fff;transition:.25s}.toggle.on i{transform:translateX(30px)}
+.wide{grid-column:span 2}.status{display:flex;align-items:center;justify-content:space-between;gap:20px}.badge{padding:10px 17px;border-radius:20px;font-size:12px;font-weight:700;box-shadow:inset 4px 4px 8px #bec3ca,inset -4px -4px 8px #fff;color:#6c7480}.footer{text-align:center;margin-top:38px;color:#858c97;font-size:12px}
+@media(max-width:800px){.grid{grid-template-columns:1fr}.wide{grid-column:auto}body{padding:25px}.card{min-height:auto}}
+</style></head>
+<body><main class="wrap">
+<header><h1>Neumorphism</h1><p>Soft surfaces · tactile depth · minimal interaction</p></header>
+<section class="grid">
+<article class="card"><div class="circle inset"><span>✦</span></div><h2>Soft Interface</h2><p>Raised and inset surfaces create a tactile interface from a single soft background.</p></article>
+<article class="card"><h2>Controls</h2><p>Press the button or move the slider.</p><div class="buttons"><button class="button">Press me</button><button class="button">Secondary</button></div><br><input class="range" type="range" value="62"></article>
+<article class="card"><h2>Toggle</h2><p>Neumorphic controls use light and shadow rather than hard borders.</p><div class="status"><span class="badge">ACTIVE</span><div class="toggle on" role="switch" aria-checked="true"><i></i></div></div></article>
+<article class="card wide"><h2>Inset Input</h2><p>Deeply recessed fields contrast with raised cards.</p><input class="input" placeholder="Type something beautiful…"><div class="buttons"><button class="button">Submit</button></div></article>
+<article class="card"><h2>Design Rule</h2><p>Keep the background, surface and shadows close in value. Depth comes from directional light.</p></article>
+</section><div class="footer">Freestyle · Neumorphic experiment</div>
+</main>
+<script>document.querySelector('.toggle').addEventListener('click',e=>{const t=e.currentTarget;t.classList.toggle('on');t.setAttribute('aria-checked',t.classList.contains('on'))})</script>
+</body></html>
