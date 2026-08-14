@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { createElement, useEffect, useState } from "react";
 
 const ASSET = "https://api.getlayers.ai/storage/v1/object/public/public/assets/soda-14ff8a788d";
 const projects = [
@@ -20,6 +20,17 @@ export const HomeView = () => {
     document.head.appendChild(script);
     return () => script.remove();
   }, []);
+
+  const modelViewer = createElement("model-viewer", {
+    className: "bluehaven-model",
+    src: `${ASSET}/deit_soda2.glb`,
+    environmentImage: "neutral",
+    exposure: "1.5",
+    cameraOrbit: "0deg 90deg 380%",
+    fieldOfView: "30deg",
+    disableZoom: true,
+    interactionPrompt: "none",
+  });
 
   return (
     <main className={`bluehaven-experience ${flavor === "blue" ? "blue-theme" : ""}`}>
@@ -43,7 +54,7 @@ export const HomeView = () => {
           <div className="soda-award"><strong>BLUEHAVEN</strong><span>CREATIVITY BEYOND LIMITS</span></div>
         </div>
         <div className="soda-product" aria-hidden="true">
-          <model-viewer className="bluehaven-model" src={`${ASSET}/deit_soda2.glb`} environment-image="neutral" exposure="1.5" camera-orbit="0deg 90deg 380%" field-of-view="30deg" disable-zoom interaction-prompt="none" />
+          {modelViewer}
           <div className="product-glow" />
         </div>
         <div className="soda-hero-right">
