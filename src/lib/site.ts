@@ -1,11 +1,12 @@
 import { publicEnv } from "@/env";
 
 export const siteConfig = {
-  name: "Freestyle",
-  description: "Independent creative studio building identities, digital experiences and campaigns for ambitious brands.",
-  url: publicEnv.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000",
+  name: "BlueHaven Studios",
+  description:
+    "BlueHaven Studios is a multidisciplinary creative studio creating brands, digital experiences, content and visual stories beyond limits.",
+  url: publicEnv.NEXT_PUBLIC_SITE_URL ?? "https://bluehavens.name.ng",
   ogImage: "/open-graph.png",
-  twitterHandle: "@freestyle",
-  author: "Freestyle Studio",
-  themeColor: "#101010",
+  twitterHandle: "@bluehavenstudios",
+  author: "BlueHaven Studios",
+  themeColor: "#111111",
 } as const;
